@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   getData() {
-    axios.get(`https://bypasscors.herokuapp.com/api/?url=http://api.coincap.io/v2/assets?limit=10`)
+    axios.get(`https://cors-anywhere.herokuapp.com/url=http://api.coincap.io/v2/assets?limit=10`)
       .then(res => {
         const current = res.data.data;
         this.setState({ crypts: current });
